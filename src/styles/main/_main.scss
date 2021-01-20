@@ -1,0 +1,40 @@
+.section {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden !important;
+
+     &__inicio {
+          h1 {
+               transform: translate(0%, 10%);
+          }
+          &-title {
+               font-family: "SpaceGrotesk-SemiBold";
+               font-size: 3.5rem;
+               color:#FF007F;
+               @include media-breakpoint-up(md) {
+                    font-size: 8.5rem;
+               }
+          }
+
+          &-subtitle {
+               font-family: "SpaceGrotesk-Light";
+               font-size: 3rem;
+               color:#343a40;
+               @include media-breakpoint-up(md) {
+                    font-size: 7.5rem;
+               }
+          }
+
+          &-description {
+               font-family: "SpaceGrotesk-Light";
+               font-size: 1.7rem;
+               background-color: #343a40;
+               color: #fff;
+          }
+     }
+
+     &__servicios {
+          background-color: #000;
+     }
+}

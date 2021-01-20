@@ -1,28 +1,39 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <scroll-animation></scroll-animation>
+    <app-header></app-header>
+    <app-inicio></app-inicio>
+    <app-servicios></app-servicios>
+    <cursor-animation></cursor-animation>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import AppHeader from './components/Header'
+import AppInicio from './components/Inicio'
+import AppServicios from './components/Servicios'
+import cursorAnimation from './components/commons/cursorAnimation'
+import scrollAnimation from './components/commons/scrollAnimation'
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: { AppHeader, AppInicio, AppServicios, scrollAnimation, cursorAnimation }
 }
 </script>
+<style lang="scss">
+  @import './src/styles/vendor.scss';
+  @import './src/styles/main.scss';
+  @font-face {
+    font-family: "SpaceGrotesk-SemiBold";
+    src: url('./assets/fonts/SpaceGrotesk-SemiBold.otf') format("truetype"), ;
+  }
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @font-face {
+    font-family: "SpaceGrotesk-Regular";
+    src: url('./assets/fonts/SpaceGrotesk-Regular.otf') format("truetype"), ;
+  }
+
+  @font-face {
+    font-family: "SpaceGrotesk-Light";
+    src: url('./assets/fonts/SpaceGrotesk-Light.otf') format("truetype"), ;
+  }
 </style>

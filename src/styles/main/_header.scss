@@ -1,0 +1,25 @@
+
+.header {
+  img {
+    height: 95px;
+  }
+}
+
+ul.header__menu {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+  background-color: #fff;
+  &__menu {
+    li {
+      display: inline;
+      padding: 0px 20px;
+    }
+  }
+}
